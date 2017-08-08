@@ -1,0 +1,57 @@
+@import '_reset';
+#app{
+
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+
+}
+
+#top{
+
+    width:100%;
+    height:1.125rem;
+    background:#ccc;
+    .T-nav{
+        height:100%;
+        background:#cdc;
+        .T-nav-header,.T-nav-menu{
+            height:50%;
+        }
+        .T-nav-header{
+            background:#fff;
+            display:flex;
+            
+            .T-n-h-p-a,.T-n-h-search,{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width:0.6rem;
+            }
+            .T-n-h-logo{
+                flex:1;              
+            }
+            .T-n-h-people,.T-n-h-search,.T-n-h-logo{
+                height:100%;
+                display:flex;
+            }
+            .icon-icon,.icon-sousuo{
+                display: flex;
+                justify-content:center; 
+                font-size:0.3125rem;
+                color:#000;
+            }
+        }
+        .T-nav-menu{
+            background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+        }
+    }
+
+}
+
+#main{
+    width:100%;
+    height:100%;
+     background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+}
