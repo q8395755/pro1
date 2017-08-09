@@ -22,22 +22,12 @@
             <i class="iconfont icon-sousuo"></i>
           </div>
         </div>
-        <!--头部菜单-->
-        <div class="T-nav-menu">
-          <ul class="T-n-m-ul">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
       </div>
     </div>
 
     <!--内容-->
     <div id="main">
-      <div class=""></div>
+      <div class="lunbo"></div>
     </div>
     <router-view></router-view>
   </div>
@@ -45,7 +35,10 @@
 
 <script>
   import './app.scss'
+  
   import './iconfont/iconfont.css'
+  
+  // import swiper from './assset/swiper-3.4.2.min.js'
   export default {
     components: {
       

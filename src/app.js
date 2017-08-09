@@ -4,6 +4,7 @@ import Vue from 'vue';
 import router from './router/'
 import App from './App.vue'
 
+
 // Vue.directive('datepicker', {
 // 	inserted: (element, binding, vnode) => {
 // 		var _datepicker = $(element).datepicker({
@@ -27,6 +28,8 @@ import App from './App.vue'
 // 		});
 // 	}
 // })
+
+
 
 new Vue({
 	el: '#app',
