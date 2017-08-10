@@ -55,17 +55,6 @@ module.exports = {
           exclude: /node_modules/,
           loader: 'style-loader!css-loader?sourceMap' 
       },
-      {
-          test: /\.(eot|woff|woff2|ttf)([\\?]?.*)$/,
-          loader: "file-loader"
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg)(\?\S*)?$/,
-        loader: 'file-loader',
-        query: {
-          name: '[name].[ext]?[hash]'
-        },
-      },
       { 
           test: /\.(woff|svg|eot|ttf)\??.*$/,
           exclude: /node_modules/,

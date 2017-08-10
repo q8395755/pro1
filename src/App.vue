@@ -27,7 +27,46 @@
 
     <!--内容-->
     <div id="main">
-      <div class="lunbo"></div>
+      <div class="main-top">
+        <div class="top-lunbo swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img class="banner-box" src="./imgs/banner1.jpg"></div>
+              <div class="swiper-slide"><img class="banner-box" src="./imgs/banner2.jpg"></div>
+              <div class="swiper-slide"><img class="banner-box" src="./imgs/banner3.jpg"></div>
+            </div>
+        </div>
+        <div class="top-list">
+          <ul class="t-l-ul">
+            <li class="t-l-u-li">
+              <i class="iconfont icon-cb076744863b79b4df2aa85bb20934df-copy"></i>
+              <span>美容</span>
+            </li>
+            <li class="t-l-u-li">
+              <i class="iconfont"></i>
+            </li>
+            <li class="t-l-u-li">
+              <i class="iconfont"></i>
+            </li>
+            <li class="t-l-u-li">
+              <i class="iconfont"></i>
+            </li>
+          </ul>
+          <ul class="t-l-ul">
+            <li class="t-l-u-li">
+              <i class="iconfont"></i>
+            </li>
+            <li class="t-l-u-li">
+              <i class="iconfont"></i>
+            </li>
+            <li class="t-l-u-li">
+              <i class="iconfont"></i>
+            </li>
+            <li class="t-l-u-li">
+              <i class="iconfont"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
     <router-view></router-view>
   </div>
@@ -35,10 +74,9 @@
 
 <script>
   import './app.scss'
-  
   import './iconfont/iconfont.css'
-  
-  // import swiper from './assset/swiper-3.4.2.min.js'
+  import './assset/swiper-3.4.2.min.css'
+  import Swiper from './assset/swiper-3.4.2.min.js'
   export default {
     components: {
       
@@ -53,7 +91,13 @@
     },
     methods:{
        
-  },
+   },
+   mounted(){ 
+      var mySwiper = new Swiper ('.swiper-container', {
+       autoplay:1000,
+      }) 
+            
+		},
     updated(){
 
     }
