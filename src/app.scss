@@ -59,6 +59,7 @@
         width:100%;
         background:#fff;
         padding:0.2rem 0.2rem;
+        padding-bottom:0;
         box-sizing:border-box;
         .top-lunbo,.top-list{
             width:100%;
@@ -75,10 +76,10 @@
             } 
         }
         .top-list{
-            height:2.25rem;
+            height:2rem;
             .t-l-ul{
                 width:100%;
-                height:1.125rem;
+                height:1rem;
                 display:flex;
                 .t-l-u-li{
                    flex:1;
@@ -89,8 +90,12 @@
                    .iconfont{
                        display:flex;
                        justify-content:center;
+                       font-size:0.46875rem;
+                       color:#ff5073;
                    }
                    span{
+                       color:#666;
+                       font-size:0.15625rem;
                        text-align:center;
                    } 
                 }
