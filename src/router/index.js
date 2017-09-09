@@ -6,6 +6,8 @@ import http from '../utils/HttpClient'
 //引入组件
 import MineCompont from '../components/mine/mine.vue'
 
+import DetailsCompont from '../components/details/details.vue'
+
 //使用路由
 Vue.use(VueRouter)
 
@@ -18,6 +20,12 @@ const router = new VueRouter({
 			path:'/mine',
 			name:'mine'	,
 			component:MineCompont,
+			children:[]
+		},
+		{
+			path:'/details',
+			name:'details'	,
+			component:DetailsCompont,
 			children:[]
 		}
 	]
