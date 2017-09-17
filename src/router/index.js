@@ -7,7 +7,7 @@ import http from '../utils/HttpClient'
 import MineCompont from '../components/mine/mine.vue'
 
 import DetailsCompont from '../components/details/details.vue'
-
+import A from '../index.vue'
 //使用路由
 Vue.use(VueRouter)
 
@@ -15,6 +15,8 @@ Vue.use(VueRouter)
 const router = new VueRouter({
 	hashbang: true,
   	history: true,
+	  //百度Vue项目启动后首页URL带的#该怎么去掉?
+	mode:'history',
 	routes:[
 		{
 			path:'/mine',
@@ -27,7 +29,14 @@ const router = new VueRouter({
 			name:'details'	,
 			component:DetailsCompont,
 			children:[]
-		}
+		},
+		{
+			path:'/',
+			name:'index',
+			component:A,
+			children:[]
+		},
+		
 	]
 
 })

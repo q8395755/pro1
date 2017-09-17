@@ -1,31 +1,46 @@
 <template>
-    <div class="index-list">
-       {{m.imgs}} 
+    <div class="details">
+        实验
     </div>
+    
 </template>
 
 <script>
-  import './index-list.scss'
+  import axios from 'axios';
   export default {
-    props:{
-      m:Object
-    },
+    
     components: {
-      
+     
     },
     created(){
-       console.log(this.m);
+      
     },
     data(){
       return {
-      
+        a:''
       }
     },
     methods:{
        
-  },
+    },
+    mounted(){
+      var se = this;
+      axios.get('./src/json/index.json')
+       .then(function (response) {
+          
+          se.data1 = response.data[0];
+          console.log(se);
+        })
+        .catch(function (error) {
+          console.log(error);
+        }
+        
+      );
+    },
     updated(){
-     console.log(m,111);
+      
     }
   }    
 </script>
+
+

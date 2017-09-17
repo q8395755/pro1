@@ -1,72 +1,83 @@
 [
     {
-      "price":"48",
-      "yuanjia":"58",
-      "title":"晶粹釉色润唇笔611#豆沙色 1.5g",
-      "guige":"1.5g",
-      "xinxi":"PAPA RECIPE春雨人气面膜套装",
-      "pinpai":"美诺",
-      "img":"01.jpg",
-      "imgs":"01.jpg"
-    },
-    {
-      "price":"48",
-      "yuanjia":"58",
-      "title":"晶粹釉色润唇笔611#豆沙色 1.5g",
-      "guige":"1.5g",
-      "xinxi":"美诺MENOW 滋润保湿型口红 可做咬唇妆果冻唇 学生少女款",
-      "pinpai":"美诺",
-      "img":"01.jpg",
-      "imgs":"02.jpg"
-    },
-    {
-      "price":"48",
-      "yuanjia":"58",
-      "title":"晶粹釉色润唇笔611#豆沙色 1.5g",
-      "guige":"1.5g",
-      "xinxi":"美诺MENOW 滋润保湿型口红 可做咬唇妆果冻唇 学生少女款",
-      "pinpai":"美诺",
-      "img":"01.jpg",
-      "imgs":"03.jpg"
-    },
-    {
-      "price":"48",
-      "yuanjia":"58",
-      "title":"晶粹釉色润唇笔611#豆沙色 1.5g",
-      "guige":"1.5g",
-      "xinxi":"美诺MENOW 滋润保湿型口红 可做咬唇妆果冻唇 学生少女款",
-      "pinpai":"美诺",
-      "img":"01.jpg",
-      "imgs":"04.jpg"
-    },
-    {
-      "price":"48",
-      "yuanjia":"58",
-      "title":"晶粹釉色润唇笔611#豆沙色 1.5g",
-      "guige":"1.5g",
-      "xinxi":"美诺MENOW 滋润保湿型口红 可做咬唇妆果冻唇 学生少女款",
-      "pinpai":"美诺",
-      "img":"01.jpg",
-      "imgs":"05.jpg"
-    },
-    {
-      "price":"48",
-      "yuanjia":"58",
-      "title":"晶粹釉色润唇笔611#豆沙色 1.5g",
-      "guige":"1.5g",
-      "xinxi":"美诺MENOW 滋润保湿型口红 可做咬唇妆果冻唇 学生少女款",
-      "pinpai":"美诺",
-      "img":"01.jpg",
-      "imgs":"06.jpg"
-    },
-    {
-      "price":"48",
-      "yuanjia":"58",
-      "title":"晶粹釉色润唇笔611#豆沙色 1.5g",
-      "guige":"1.5g",
-      "xinxi":"美诺MENOW 滋润保湿型口红 可做咬唇妆果冻唇 学生少女款",
-      "pinpai":"美诺",
-      "img":"01.jpg",
-      "imgs":"07.jpg"       
+      "chunyu":[
+        {
+          "id":1030,
+          "price":"188",
+          "yuanjia":"833",
+          "title":"PAPA RECIPE春雨人气面膜套装",
+          "pinpai":"PAPA RECIPE",
+          "guigexuanze":"no",
+          "guige":"PAPA RECIPE春雨人气面膜套装x1",
+          "num":483,
+          "logo":"logo.jpg",
+          "img":"01.jpg",
+          "imgs":["02-imgs01.jpg","02-imgs01.jpg"],
+          "lunboimgs":["02-banner01.jpg","02-banner01.jpg"],
+          "manjian":"满减",
+          "jiajiagou":"加价购"
+        },
+        {
+          "id":1005,
+          "price":"308",
+          "yuanjia":"769",
+          "title":"PAPA RECIPE春雨完美护肤组合",
+          "guigexuanze":"no",
+          "guige":"PAPA RECIPE春雨完美护肤组合x1",
+          "pinpai":"PAPA RECIPE",
+          "img":"02.jpg",
+          "lunboimgs":["02-banner01.jpg","01-lunbo01.jpg"],
+          "imgs":["02-imgs01.jpg","02-imgs02.jpg","02-imgs03.jpg","02-imgs04.jpg","02-imgs05.jpg","02-imgs06.jpg","02-imgs07.jpg","02-imgs08.jpg","02-imgs09.jpg"],
+          "num":153,
+          "logo":"logo.jpg",
+          "manjian":"满减",
+          "jiajiagou":"加价购"
+        },
+        {
+          "id":1163,
+          "price":"48",
+          "yuanjia":"58",
+          "title":"晶粹釉色润唇笔611#豆沙色 1.5g",
+          "guige":"1.5g",
+          "xinxi":"美诺MENOW 滋润保湿型口红 可做咬唇妆果冻唇 学生少女款",
+          "pinpai":"美诺",
+          "img":"03.jpg",
+          "imgs":"03.jpg"
+        },
+        {
+          "id":1116,
+          "price":"48",
+          "yuanjia":"58",
+          "title":"晶粹釉色润唇笔611#豆沙色 1.5g",
+          "guige":"1.5g",
+          "xinxi":"美诺MENOW 滋润保湿型口红 可做咬唇妆果冻唇 学生少女款",
+          "pinpai":"美诺",
+          "img":"04.jpg",
+          "imgs":"04.jpg"
+        },
+        {
+          "id":1225,
+          "price":"48",
+          "yuanjia":"58",
+          "title":"晶粹釉色润唇笔611#豆沙色 1.5g",
+          "guige":"1.5g",
+          "xinxi":"美诺MENOW 滋润保湿型口红 可做咬唇妆果冻唇 学生少女款",
+          "pinpai":"美诺",
+          "img":"05.jpg",
+          "imgs":"05.jpg"
+        },
+        {
+          "id":1230,
+          "price":"48",
+          "yuanjia":"58",
+          "title":"晶粹釉色润唇笔611#豆沙色 1.5g",
+          "guige":"1.5g",
+          "xinxi":"美诺MENOW 滋润保湿型口红 可做咬唇妆果冻唇 学生少女款",
+          "pinpai":"美诺",
+          "img":"06.jpg",
+          "imgs":"06.jpg"
+        }
+      ],
+      "kouhong":[{"num":1}]
     }
 ]
