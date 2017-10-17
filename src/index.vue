@@ -20,7 +20,9 @@
           </div>
           <!--搜索盒子-->
           <div class="T-n-h-search">
-            <i class="iconfont icon-sousuo"></i>
+            <router-link to="/search">
+              <i class="iconfont icon-sousuo"></i>
+            </router-link>
           </div>
         </div>
       </div>
@@ -31,6 +33,7 @@
     <div id="main">
       <!--导航和轮播-->
       <div class="main-top">
+        <!--轮播-->
         <div class="top-lunbo swiper-container">
             <div class="swiper-wrapper">
               <div class="swiper-slide"><img class="banner-box" src="./imgs/banner1.jpg"></div>
@@ -39,6 +42,8 @@
             </div>
             <div class="swiper-pagination"></div>
         </div>
+
+        <!--导航-->
         <div class="top-list">
           <ul class="t-l-ul">
             <li class="t-l-u-li">
@@ -81,15 +86,18 @@
       </div>
       <!--商品推荐-->
       <div class="main-container">
+        <!--这里把结构做成一个组件会比较方便-->
+        <!--一个m-b-container就是一个系列商品-->
+        <!--1、PAPA RECIPE-->
         <div class="main-box">
           <div class="m-b-banner">
             <img class="banner-box1" src="./imgs/banner21.jpeg"></img>
           </div>
-          <!--:m相当于把data传给indexlist组件-->
+
           <div class="m-b-container">
             <ul class="m-b-c-ul">
-              <li class="m-b-c-li" v-for="(index,attr) in data1.chunyu" >
-                <router-link :to="{path:'/details',query:{id:index.id}}">
+              <li class="m-b-c-li" v-for="(index,attr) in data1.chunyu" v-if="attr<=11">
+                <router-link :to="{path:'/details',query:{id:index.id,type:index.type}}">
                 <div class="m-b-c-li-imgbox">
                   <img class="loading-imgs" :src="src + loading" :data-src="chunfengsrc+index.img">
                 </div>
@@ -105,12 +113,229 @@
                   </div>
                 </div>
                 </router-link>
+                
+              </li>
+              <li class="m-b-c-li">
+                <router-link to="/main">
+                <div class="all_box">
+                  <span class="all_chinese">查看全部</span>
+                  <div class="all_english">See All</div>
+                </div>
+                </router-link>
               </li>
             </ul>
           </div>
         </div>
+
+        <!--2、aimoli-->
+        <div class="main-box">
+          <div class="m-b-banner">
+            <img class="banner-box1" src="./imgs/aimoli.jpg"></img>
+          </div>
+
+          <div class="m-b-container">
+            <ul class="m-b-c-ul">
+              <li class="m-b-c-li" v-for="(index,attr) in data1.aimoli" v-if="attr<=100">
+                <router-link :to="{path:'/details',query:{id:index.id,type:index.type}}">
+                <div class="m-b-c-li-imgbox">
+                  <img class="loading-imgs" :src="src + loading" :data-src="chunfengsrc+index.img">
+                </div>
+                <div class="m-b-c-li-textbox">
+                  <span class="textbox-title">{{index.title}}</span>
+                </div>
+                <div class="m-b-c-li-pricebox">
+                  <div class="priceMax-box">
+                    <span>¥</span>{{index.price}}<span>.00</span>
+                  </div>
+                  <div class="priceMin-box">
+                    <span>¥</span>{{index.yuanjia}}<span>.00</span>
+                  </div>
+                </div>
+                </router-link>
+                
+              </li>
+              <li class="m-b-c-li">
+                <router-link to="/main">
+                <div class="all_box">
+                  <span class="all_chinese">查看全部</span>
+                  <div class="all_english">See All</div>
+                </div>
+                </router-link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!--3.pony effect-->
+        <div class="main-box">
+          <div class="m-b-banner">
+            <img class="banner-box1" src="./imgs/banner22.jpg"></img>
+          </div>
+
+          <div class="m-b-container">
+            <ul class="m-b-c-ul">
+              <li class="m-b-c-li" v-for="(index,attr) in data1.pony" v-if="attr<=100">
+                <router-link :to="{path:'/details',query:{id:index.id,type:index.type}}">
+                <div class="m-b-c-li-imgbox">
+                  <img class="loading-imgs" :src="src + loading" :data-src="chunfengsrc+index.img">
+                </div>
+                <div class="m-b-c-li-textbox">
+                  <span class="textbox-title">{{index.title}}</span>
+                </div>
+                <div class="m-b-c-li-pricebox">
+                  <div class="priceMax-box">
+                    <span>¥</span>{{index.price}}<span>.00</span>
+                  </div>
+                  <div class="priceMin-box">
+                    <span>¥</span>{{index.yuanjia}}<span>.00</span>
+                  </div>
+                </div>
+                </router-link>
+                
+              </li>
+              <li class="m-b-c-li">
+                <router-link to="/main">
+                <div class="all_box">
+                  <span class="all_chinese">查看全部</span>
+                  <div class="all_english">See All</div>
+                </div>
+                </router-link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!--4.xuehua-->
+        <div class="main-box">
+          <div class="m-b-banner">
+            <img class="banner-box1" src="./imgs/banner23.jpg"></img>
+          </div>
+
+          <div class="m-b-container">
+            <ul class="m-b-c-ul">
+              <li class="m-b-c-li" v-for="(index,attr) in data1.xuehua" v-if="attr<=100">
+                <router-link :to="{path:'/details',query:{id:index.id,type:index.type}}">
+                <div class="m-b-c-li-imgbox">
+                  <img class="loading-imgs" :src="src + loading" :data-src="chunfengsrc+index.img">
+                </div>
+                <div class="m-b-c-li-textbox">
+                  <span class="textbox-title">{{index.title}}</span>
+                </div>
+                <div class="m-b-c-li-pricebox">
+                  <div class="priceMax-box">
+                    <span>¥</span>{{index.price}}<span>.00</span>
+                  </div>
+                  <div class="priceMin-box">
+                    <span>¥</span>{{index.yuanjia}}<span>.00</span>
+                  </div>
+                </div>
+                </router-link>
+                
+              </li>
+              <li class="m-b-c-li">
+                <router-link to="/main">
+                <div class="all_box">
+                  <span class="all_chinese">查看全部</span>
+                  <div class="all_english">See All</div>
+                </div>
+                </router-link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+         <!--5、innisfree-->
+        <div class="main-box">
+          <div class="m-b-banner">
+            <img class="banner-box1" src="./imgs/banner24.jpg"></img>
+          </div>
+
+          <div class="m-b-container">
+            <ul class="m-b-c-ul">
+              <li class="m-b-c-li" v-for="(index,attr) in data1.innisfree" v-if="attr<=100">
+                <router-link :to="{path:'/details',query:{id:index.id,type:index.type}}">
+                <div class="m-b-c-li-imgbox">
+                  <img class="loading-imgs" :src="src + loading" :data-src="chunfengsrc+index.img">
+                </div>
+                <div class="m-b-c-li-textbox">
+                  <span class="textbox-title">{{index.title}}</span>
+                </div>
+                <div class="m-b-c-li-pricebox">
+                  <div class="priceMax-box">
+                    <span>¥</span>{{index.price}}<span>.00</span>
+                  </div>
+                  <div class="priceMin-box">
+                    <span>¥</span>{{index.yuanjia}}<span>.00</span>
+                  </div>
+                </div>
+                </router-link>
+                
+              </li>
+              <li class="m-b-c-li">
+                <router-link to="/main">
+                <div class="all_box">
+                  <span class="all_chinese">查看全部</span>
+                  <div class="all_english">See All</div>
+                </div>
+                </router-link>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!--6、laneige-->
+        <div class="main-box">
+          <div class="m-b-banner">
+            <img class="banner-box1" src="./imgs/banner12.jpg"></img>
+          </div>
+
+          <div class="m-b-container">
+            <ul class="m-b-c-ul">
+              <li class="m-b-c-li" v-for="(index,attr) in data1.laneige" v-if="attr<=100">
+                <router-link :to="{path:'/details',query:{id:index.id,type:index.type}}">
+                <div class="m-b-c-li-imgbox">
+                  <img class="loading-imgs" :src="src + loading" :data-src="chunfengsrc+index.img">
+                </div>
+                <div class="m-b-c-li-textbox">
+                  <span class="textbox-title">{{index.title}}</span>
+                </div>
+                <div class="m-b-c-li-pricebox">
+                  <div class="priceMax-box">
+                    <span>¥</span>{{index.price}}<span>.00</span>
+                  </div>
+                  <div class="priceMin-box">
+                    <span>¥</span>{{index.yuanjia}}<span>.00</span>
+                  </div>
+                </div>
+                </router-link>
+                
+              </li>
+              <li class="m-b-c-li">
+                <router-link to="/main">
+                <div class="all_box">
+                  <span class="all_chinese">查看全部</span>
+                  <div class="all_english">See All</div>
+                </div>
+                </router-link>
+              </li>
+            </ul>
+          </div>
+        </div> 
+
+
+
+        <div class="main_foot">
+          <div>已经没有更多了哦~</div>
+        </div>       
       </div>
     </div>
+
+    <!--购物车组件-->
+    <div class="buycar">
+      <router-link to="/car"><img :src="src + car "></router-link>
+      <span class="buycar_num">{{buyNum}}</span>
+    </div>
+    <!--组件的窗口-->
     <router-view></router-view>
   </div>
 </template>
@@ -139,11 +364,22 @@
        data1:'' ,
        src:base.imgUrl,
        loading:'loading.gif',
-       chunfengsrc:base.imgUrl+'chunfeng/'
+       car:'car.png',
+       chunfengsrc:base.imgUrl+'chunfeng/',
+       buyNum:'',
       }
     },
     methods:{
-       
+      checkCar(){
+        if(!localStorage.car || localStorage.car==''){
+            localStorage.car='';
+        }else{
+          this.buyNum = JSON.parse(localStorage.car).length;
+          var oBuyNum =document.querySelector('.buycar_num');
+          oBuyNum.style.display = 'block';
+        }
+        
+      },        
    },
    mounted(){ 
       //swiper  banner轮播
@@ -169,7 +405,7 @@
         
       );
       
-         
+    this.checkCar();
 		},
     updated(){
       //图片延迟加载

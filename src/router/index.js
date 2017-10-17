@@ -5,9 +5,10 @@ import http from '../utils/HttpClient'
 
 //引入组件
 import MineCompont from '../components/mine/mine.vue'
-
 import DetailsCompont from '../components/details/details.vue'
-import A from '../index.vue'
+import IndexCompont from '../index.vue'
+import CarCompont from '../components/car/car.vue'
+import SearchCompont from '../components/search/search.vue'
 //使用路由
 Vue.use(VueRouter)
 
@@ -18,6 +19,12 @@ const router = new VueRouter({
 	  //百度Vue项目启动后首页URL带的#该怎么去掉?
 	mode:'history',
 	routes:[
+		{
+			path:'/',
+			name:'index',
+			component:IndexCompont,
+			children:[]
+		},
 		{
 			path:'/mine',
 			name:'mine'	,
@@ -31,11 +38,17 @@ const router = new VueRouter({
 			children:[]
 		},
 		{
-			path:'/',
-			name:'index',
-			component:A,
+			path:'/car',
+			name:'car'	,
+			component:CarCompont,
 			children:[]
-		},
+		},		
+		{
+			path:'/search',
+			name:'search'	,
+			component:SearchCompont,
+			children:[]
+		},		
 		
 	]
 

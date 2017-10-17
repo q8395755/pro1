@@ -6,7 +6,7 @@
 
   .details_top{
     width:100%;
-    position:absolute;
+    position:fixed;
     height: 0.5625rem;
     z-index:12;
     background:#fff;
@@ -82,8 +82,9 @@
       background:#fff;
       margin-top: -4px;
       flex-direction:initail;
-      .product_pinpai{
-        flex:2;
+      .product_pinpai_box{
+        border-bottom:0.015625rem solid #ddd;
+
       }
       .product_xiaoliang{
         flex:1; 
@@ -95,13 +96,14 @@
       display:flex;
       flex-direction:column;
       padding:0.23rem;
+      padding-bottom:0;
       box-sizing:border-box;
       .product_box{
         display:flex;
         flex:1;
         .product_title{
           flex:3;
-          border-right:1px solid #ddd;
+          border-right:0.015625rem solid #ddd;
           font-size:0.21rem;
           font-weight:400;
           color:#333;
@@ -134,7 +136,7 @@
         .product_logo_box{
           width:0.546875rem;
           height:0.546875rem;
-          border:3px solid #aaa;
+          border:0.015625rem solid #aaa;
           img{
             width:100%;
             height:100%;
@@ -143,17 +145,195 @@
         }
         .p_g_jiantou{
           width:0.328125rem;
-          height:0.328125rem;
+          display:flex;
+          justify-content:space-around;
+          flex-direction:column;
+          .icon-jiantou-{
+            font-size:20px;
+          }
         }
         .product_pinpai{
           flex:1;
+          padding-left:0.15625rem;
           font-size:0.2rem;
+        }
+      }
+      .product_price_box{
+        color:#bbb;
+        .p_price{
+          vertical-align:middle;
+          color:#ff5073;
+          font-size:16px;
+          font-weight: bold;
+          margin-left:5px;
+        }
+        p{
+          font-size:14px;
+          box-sizing:border-box;
+          padding-top:0.15625rem;
+        }
+        .text_css{
+          color:#333;
+          vertical-align:middle;
+        }
+        .p_yuanjia{
+          
+          vertical-align:middle;
+          margin-left:5px;
+        }
+      }
+      
+    }
+    .product_zhekou_box{
+      background:#fff;
+      margin-top:0.20rem;
+      padding: 0.1rem 0.23rem 0rem 0.23rem;
+      .border_box{
+        display:flex;
+        border-bottom:0.015625rem solid #ccc;
+        .product_cuxiao,.p_z{
+          color:#999;
+          font-size:12px;
+        }
+        .product_cuxiao{
+          width:0.609375rem;
+          float:left;
+        }
+        .p_z{
+          flex:1;
+          padding-left:10px;
+          color:#333;
+        }
+        .p_g_jiantou{
+          width:0.25rem;
+          float:right;
+        }
+        .zhekou_color{
+          color:#ff5073;
+          display:inline-block;
+          border:0.015625rem solid #ff5073;
+          padding:0.015625rem;
+        }
+        .product_zhekou{
+          padding-bottom:5px;
+        }
+      }
+      
+    }
+    .product_peisong_box{
+        margin-top:0rem;
+        .border_box{
+          border:0;
+        }
+    }
+    .product_guige{
+      padding-bottom:0.1rem;
+      .border_box{
+        border:0;
+        .guige_title{
+          font-size:14px;
+          color:#333;
+          flex:1;
+        }
+      }
+
+    }
+    .tuwenxiangqing{
+      background:#fff;
+      margin-top: 0.20rem;
+      padding-bottom:0.1rem;
+      .tuwen_title{
+        padding-bottom: 0.1rem;
+        border-bottom: 0.015625rem solid #ddd;
+        font-size:14px;
+        color:#333;
+      }
+      .tuwen_imgs{
+        margin-top:10px;
+        img{
+          width:100%;
         }
       }
     }
   }
   .details_foot{
     height: 0.75rem;
-    background:#ccc;
+    background:#fff;
+    display:flex;
+    border-top:0.015625rem solid #ddd;
+    .foot_left,.foot_right{
+      display:flex;
+    }
+    .foot_left{
+      width:40%;
+      height:100%;
+      padding:0.1rem;
+      box-sizing:border-box;
+      .foot_shoucang,.foot_gouwuche{
+        width:50%;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        i{
+          display:flex;
+          justify-content: center;
+          font-size:22px;
+          color:#aaa;
+        } 
+      }
+      .foot_shoucang{
+        border-right:0.015625rem solid #ddd;
+      }
+      .foot_gouwuche{
+        position:relative;
+        .gouwu_num{
+          position: absolute;
+          
+          color: #fff;
+          font-size: 0.1875rem;
+          display: block;
+          width: 0.25rem;
+          height: 0.25rem;
+          text-align: center;
+          line-height: 0.25rem;
+          background: #ff5073;
+          border-radius: 50%;
+          top:0%;
+          right: 19%;
+          display: none;
+          -webkit-transform: scale(0.5);
+          -moz-transform: scale(0.5);
+          -ms-transform: scale(0.5);
+          -o-transform: scale(0.5);
+          transform: scale(0.7);
+        
+        }
+      }
+    }
+    .foot_right{
+      width:60%;
+      background:#ff5073;
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      
+      span{
+        text-align:center;
+        color:#fff;
+        font-size:14px;
+      }
+    }
   }
+  .p_g_jiantou{
+    transform:rotateY(180deg);
+    color:#ddd;
+  }
+  .details_zhezhao{
+        position:absolute;
+        z-index:31;
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,.3);
+    }
 }
